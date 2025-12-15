@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
@@ -29,6 +30,12 @@ return (
         
         <header className="flex flex-col items-center">
           <h1>React & Next.js</h1>
+          <nav className="flex gap-4">
+             <Link href="/">Intro</Link>
+             <Link href="/sobre">Sobre</Link>
+          </nav>
+      
+
         </header>
         
         <main className="bg-blue-200 p-5 rounded-2xl max-w-2xl min-h-[70vh]">
