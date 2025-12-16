@@ -1,9 +1,14 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-images: {
-domains: ['deisishop.pythonanywhere.com'],
-},
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'deisishop.pythonanywhere.com',
+        pathname: '/**',
+      },
+    ],
+  },
 };
-
 
 module.exports = nextConfig;
