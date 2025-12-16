@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
+import Relogio from "./components/Relogio";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -33,16 +34,25 @@ return (
           <nav className="flex gap-4">
              <Link href="/">Intro</Link>
              <Link href="/sobre">Sobre</Link>
+             <Link href="/caracteristicas">Caracteristicas</Link>
+             <Link href="/tecnologias">Tecnologias</Link> 
+             <Link href="/projetos">Projetos</Link>
+             <Link href="/contador">contador</Link>
+             <Link href="/input">input</Link>
+             <Link href="/produtos">produtos</Link>
           </nav>
       
 
         </header>
         
         <main className="bg-blue-200 p-5 rounded-2xl max-w-2xl min-h-[70vh]">
-          {children}
-        </main>
+          {children} 
+         </main>
         
-        <footer>DIW {data.getFullYear()}</footer>
+        <footer>
+          DIW {data.getFullYear()} <br />
+           <Relogio />
+        </footer>
 
       </body>
     </html>

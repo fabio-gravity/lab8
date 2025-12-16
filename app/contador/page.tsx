@@ -1,0 +1,12 @@
+import Contador from "../components/contador";
+
+
+export default function ContadorPage() {
+  return (
+    <div>
+      <h1>Contador</h1>
+      <Contador />;
+    </div>
+  );
+}
+

@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import tecnologias from '@/app/data/tecnologias.json'
+import TecnologiaCard from "../components/TecnologiaCard";
 
 export default function TecnologiasPage() {
   const lista = JSON.parse(JSON.stringify(tecnologias))
@@ -32,10 +33,12 @@ export default function TecnologiasPage() {
             </div>
 
             <div className="mt-2">
-              {/* Mostrar um rating simples com estrelas (★) */}
               <div className="text-yellow-500">
                 {Array.from({ length: 5 }).map((_, i) => (
-                  <span key={i} className={i < tech.rating ? 'opacity-100' : 'opacity-30'}>
+                  <span
+                    key={i}
+                    className={i < tech.rating ? 'opacity-100' : 'opacity-30'}
+                  >
                     ★
                   </span>
                 ))}
