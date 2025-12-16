@@ -40,6 +40,7 @@ return (
              <Link href="/contador">contador</Link>
              <Link href="/input">input</Link>
              <Link href="/produtos">produtos</Link>
+             <Link href="/paises">paises</Link>
           </nav>
       
 
