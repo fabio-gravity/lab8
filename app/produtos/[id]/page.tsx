@@ -5,8 +5,6 @@ import { fetcher } from '../../lib/fetcher';
 import { Product } from '../../models/interfaces';
 import ProdutoDetalhe from '../../components/ProdutoDetalhe';
 
-
-
 interface PageProps {
   params: {
     id: string;
@@ -17,7 +15,7 @@ export default function ProdutoPage({ params }: PageProps) {
   const { id } = params;
 
   const { data, error, isLoading } = useSWR<Product>(
-    `https://deisishop.pythonanywhere.com/products/${id}/`,
+    `https://deisishop.pythonanywhere.com/products/${id}`,
     fetcher
   );
 
